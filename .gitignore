@@ -1,0 +1,7 @@
+# Files generate after running 'perl Makefile.PL'
+WWW-Mechanize-Firefox-Extended-*.tar.gz
+MYMETA.json
+MYMETA.yml
+Makefile
+blib/
+pm_to_blib
