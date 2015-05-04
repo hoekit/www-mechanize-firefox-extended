@@ -1,9 +1,13 @@
 Changes
+MANIFEST
 lib/WWW/Mechanize/Firefox/Extended.pm
 Makefile.PL
-MANIFEST			This list of files
-README
+LICENSE
+README.pod
 t/00-load.t
+t/10-hasAll-hasAny.html
+t/10-hasAll-hasAny.t
+t/20-waitAll-waitAny.html
+t/20-waitAll-waitAny.t
 t/manifest.t
-t/pod-coverage.t
 t/pod.t
