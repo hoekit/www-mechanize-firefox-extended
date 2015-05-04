@@ -18,7 +18,7 @@ WriteMakefile(
         'Test::More' => 0,
     },
     PREREQ_PM => {
-        Time::HiRes => 0,
+        'Time::HiRes' => 0,
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'WWW-Mechanize-Firefox-Extended-*' },
