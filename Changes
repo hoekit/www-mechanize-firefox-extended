@@ -2,4 +2,6 @@ Revision history for WWW::Mechanize::Firefox::Extended
 
 0.01    04-May-2015
         First version, released on an unsuspecting world.
+        Include two (2) functions that checks selector existence.
+        Include two (2) functions that waits for selector existence.
 
