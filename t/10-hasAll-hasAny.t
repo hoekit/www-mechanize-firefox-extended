@@ -1,16 +1,26 @@
+#!perl -w
 use strict;
-use warnings FATAL => 'all';
-
 use Time::HiRes qw/tv_interval gettimeofday/;
-use Test::More tests => 5;
+use Test::More;
 
 use lib 'lib';
-BEGIN { use_ok('WWW::Mechanize::Firefox::Extended') };
+use WWW::Mechanize::Firefox::Extended;
+
+my $o = eval { WWW::Mechanize::Firefox::Extended->new() };
+
+if (! $o) {
+    my $err = $@;
+    plan skip_all => "Couldn't connect to MozRepl: $@";
+    exit;
+} else {
+    plan tests => 5;
+};
+
+isa_ok $o, 'WWW::Mechanize::Firefox::Extended';
 
 my $DEBUG = 0;
 my ($got, $exp, $msg, $tmp);
 my ($t0, $elapsed, $wait, $found);
-my $o = WWW::Mechanize::Firefox::Extended->new();
 
 #----- Test hasAll()
 $o->get_local('10-hasAll-hasAny.html');
